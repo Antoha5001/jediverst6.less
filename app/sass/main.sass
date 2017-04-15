@@ -1,0 +1,104 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "bourbon";
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+strong, b
+	font-family: roboto-bold, sans-serif
+	font-style: normal
+
+
+h1, h2, h3, h4, h5, h6, .button
+	font-family: roboto-cond-bold
+	font-style: normal
+	text-transform: uppercase
+.is-home
+
+.top-line
+	background-color: $main-color
+	text-align: center
+	ul, li
+		list-style-type: none
+		margin: 0
+		padding: 0
+	.sf-menu
+		margin: 0 auto -6px
+		color: #fff
+		float: none
+		display: inline-block
+		background: $main-color
+		font-family: roboto-cond-bold, sans-serif
+		font-size: em(15px)
+		a
+			color: #fff
+			border: none
+			padding: 25px 28px 25px
+			.fa
+				font-size: 11px
+				margin: 4px
+		> li
+			display: inline-block
+			background: $main-color
+			&:hover
+				background: darken($main-color, 4%)
+				> a
+					color: $accent-color
+		ul, ul li
+			background: $main-color
+			li
+				text-align: left
+				border: none
+				border-top: 1px solid lighten($main-color, 10%)
+				border-left: 1px solid lighten($main-color, 10%)
+				a
+					padding: 12px 25px 12px
+			&:hover
+				background: darken($main-color, 4%)
+				> a
+					color: $accent-color
+
+@import "media" // Всегда в конце
+
+@import "../libs/animate.css/animate"
+@import "../libs/superfish/dist/css/superfish"
+@import "../libs/font-awesome/css/font-awesome.min"
