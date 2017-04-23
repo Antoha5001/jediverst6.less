@@ -33,10 +33,13 @@ body
 	font-size: 16px
 	min-width: 320px
 	position: relative
-	line-height: 1.6
+	line-height: 1.5
 	font-family: $default-font
 	overflow-x: hidden
 	opacity: 1
+	background: $main-color
+.text-right
+	text-align: right
 
 .img-responsive
 	display: block
@@ -57,6 +60,7 @@ h1, h2, h3, h4, h5, h6, .button
 .top-line
 	background-color: $main-color
 	text-align: center
+	border-bottom: lighten($main-color, 7%) 1px solid
 	ul, li
 		list-style-type: none
 		margin: 0
@@ -96,6 +100,118 @@ h1, h2, h3, h4, h5, h6, .button
 				background: darken($main-color, 4%)
 				> a
 					color: $accent-color
+.top-panel
+	background: rgba(lighten($main-color, 5%), .8)
+	color: #fff
+	padding: 50px 0
+	position: relative
+	&-content
+		position: relative
+		z-index: 1
+	&-box
+		h4
+			font-family: 'roboto-cond-reg'
+			font-weight: normal
+			font-size: em(15px)
+			margin-top: 0
+			margin-bottom: 15px
+			position: relative
+			&::after
+				position: absolute
+				left: 0
+				bottom: -8px
+				content: ""
+				height: 1px
+				width: 100%
+				background: $accent-color
+				opacity: .4
+		ul, li
+			padding: 0
+			margin: 0
+			list-style-type: none
+			li
+				display: inline-block
+				max-width: 40%
+				font-size: em(12px)
+				opacity: .35
+				padding: 0 10px 0 22px
+				position: relative
+				&:only-child
+					max-width: 100%
+				.fa
+					font-size: 16px
+					position: absolute
+					top: 4px
+					left: 0px
+
+	&::before
+		position: absolute
+		content: ""
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background: url('../img/top-pannel-bg.jpg')
+		z-index: 0
+		opacity: .16
+.logo
+	position: relative
+	top: 3px
+	img
+		max-width: 100%
+
+.top-phone
+	margin-top: -3px
+	font-family: 'roboto-cond-reg'
+	font-weight: normal
+	font-size: em(19px)
+	span, .fa
+		font-size: em(14px)
+		opacity: .45
+
+.top-email
+	a
+		font-family: 'roboto-cond-reg'
+		font-weight: normal
+		font-size: em(19px)
+		color: #fff
+		text-decoration: underline
+	span, .fa
+		font-size: em(14px)
+		opacity: .45
+.top-phone,.top-email
+	.fa
+		margin-right: 5px
+
+.top-button
+	margin-top: 15px
+.button
+	background: $accent-color
+	font-size: em(16px)
+	border-radius: 2px
+	color: #222
+	//border-bottom: 3px solid darken($accent-color, 15%)
+	padding: 6px 22px
+	text-decoration: none
+	position: relative
+	&::after
+		position: absolute
+		content: ""
+		width: 100%
+		background: darken($accent-color, 15%)
+		height: 4px
+		left: 0
+		bottom: 0
+		border-bottom-left-radius: 2px
+		border-bottom-right-radius: 2px
+	&:hover, &:focus
+		text-decoration: none
+		color: #222
+.button-small
+	font-size: em(14px)
+	&::after
+		height: 2px
+
 
 @import "media" // Всегда в конце
 
